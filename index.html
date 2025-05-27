@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Djeanne Mira Bolos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Djeanne Mira Bolos</h1>
+    <p>Bolos personalizados com carinho e sabor!</p>
+  </header>
+
+  <nav>
+    <button onclick="showTab('produtos')">Produtos</button>
+    <button onclick="showTab('calendario')">Calendário</button>
+    <button onclick="showTab('carrinho')">Carrinho</button>
+  </nav>
+
+  <section id="produtos" class="tab">
+    <h2>Escolha seu bolo</h2>
+    <div class="produtos-container">
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=400&q=80" onclick="expandImage(this)">
+        <p>Bolo 20cm</p>
+        <button onclick="addToCart('Bolo 20cm')">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1599785209790-e4d5b306baf5?auto=format&fit=crop&w=400&q=80" onclick="expandImage(this)">
+        <p>Bolo 30cm</p>
+        <button onclick="addToCart('Bolo 30cm')">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1612198675703-2f71b6f2dcd1?auto=format&fit=crop&w=400&q=80" onclick="expandImage(this)">
+        <p>Bolo de Chocolate</p>
+        <button onclick="addToCart('Bolo de Chocolate')">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1612197526860-beb10b971e81?auto=format&fit=crop&w=400&q=80" onclick="expandImage(this)">
+        <p>Bolo de Morango</p>
+        <button onclick="addToCart('Bolo de Morango')">Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendario" class="tab" style="display:none;">
+    <h2>Datas disponíveis</h2>
+    <input type="date" id="dataEscolhida">
+    <div id="datasOcupadas">
+      <h3>Datas já ocupadas:</h3>
+      <ul>
+        <li>2025-06-05</li>
+        <li>2025-06-12</li>
+        <li>2025-06-18</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="carrinho" class="tab" style="display:none;">
+    <h2>Seu carrinho</h2>
+    <ul id="listaCarrinho"></ul>
+    <button id="encomendarBtn">Encomendar via WhatsApp</button>
+  </section>
+
+  <div id="imagemExpandida" onclick="fecharImagem()">
+    <img id="imgFull">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
